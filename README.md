@@ -23,3 +23,10 @@ ip http secure-server
 - Uses the `Cisco-IOS-XE-native` YANG model; tested against 17.x. Earlier IOS-XE
   releases may nest things differently.
 - `verify=False` is used for lab self-signed certificates
+
+### Test endpoints manually prior to find correct nesting
+```
+curl -k -u admin:Cisco123 \
+  -H "Accept: application/yang-data+json" \
+  https://192.168.122.128/restconf/data/Cisco-IOS-XE-native:native/ip/domain | jq
+```

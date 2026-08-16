@@ -1,11 +1,14 @@
+# Check configuratoin vs golden config yaml file
+# tested working C8000v Version 17.18.2, C1000v 17.03.08a
+
+
 import os
 import sys
-
 import requests
 import yaml
 
 
-DEVICE_HOST = "192.168.122.128"
+DEVICE_HOST = "192.168.122.110"
 DEVICE_USER = "admin"
 DEVICE_PASS = "Cisco123"
 GOLDEN_FILE = "golden_ntp.yml"

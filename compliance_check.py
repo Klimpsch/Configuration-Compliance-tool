@@ -31,7 +31,7 @@ def fetch_actual_ntp():
     response.raise_for_status()
     data = response.json()
 
-    server_entries = data["Cisco-IOS-XE-native:ntp"]["Cisco-IOS-XE-native:ntp:server"]["server-list"]
+    server_entries = data["Cisco-IOS-XE-native:ntp"]["Cisco-IOS-XE-native-ntp:server"]["server-list"]
     return [entry["ip-address"] for entry in server_entries]
 
 

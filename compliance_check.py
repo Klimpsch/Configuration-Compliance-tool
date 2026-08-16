@@ -31,7 +31,7 @@ def fetch_actual_ntp():
     response.raise_for_status()
     data = response.json()
 
-    server_entries = data["Cisco-IOS-XE-native:ntp"]["server"]["server-list"]
+    server_entries = data["Cisco-IOS-XE-native:ntp"]["Cisco-IOS-XE-native:ntp:server"]["server-list"]
     return [entry["ip-address"] for entry in server_entries]
 
 
@@ -44,6 +44,7 @@ def compare(golden_servers, actual_servers):
 
 
 def main():
+
     golden = load_golden(GOLDEN_FILE)
     actual_servers = fetch_actual_ntp()
     missing, extra = compare(golden["servers"], actual_servers)

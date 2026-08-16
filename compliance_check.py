@@ -5,7 +5,7 @@ import requests
 import yaml
 
 
-DEVICE_HOST = "192.168.122.110"
+DEVICE_HOST = "192.168.122.128"
 DEVICE_USER = "admin"
 DEVICE_PASS = "Cisco123"
 GOLDEN_FILE = "golden_ntp.yml"

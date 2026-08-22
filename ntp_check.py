@@ -9,8 +9,8 @@ import yaml
 
 
 DEVICE_HOST = "192.168.122.110"
-DEVICE_USER = "admin"
-DEVICE_PASS = "Cisco123"
+DEVICE_USER = ""
+DEVICE_PASS = ""
 GOLDEN_FILE = "golden_ntp.yml"
 
 

@@ -3,8 +3,8 @@ import requests
 import yaml
 
 DEVICE_HOST = "192.168.122.128"
-DEVICE_USER = "admin"
-DEVICE_PASS = "Cisco123"
+DEVICE_USER = ""
+DEVICE_PASS = ""
 GOLDEN_FILE = "golden_domain.yml"
 
 DOMAIN_URL = f"https://{DEVICE_HOST}/restconf/data/Cisco-IOS-XE-native:native/ip/domain"
@@ -43,6 +43,7 @@ def main():
         print(f"PASS: {DEVICE_HOST} domain name matches golden config ({golden_domain})")
         return 0
 
+    print("\n")
     print(f"FAIL: {DEVICE_HOST} domain name drifted from golden config")
     print(f"  golden: {golden_domain}")
     print(f"  device: {actual_domain}")
